@@ -1,0 +1,117 @@
+:root {
+  /* colors */
+  --dark-teal: #4D96A9;
+  --light-teal: #8FE6F9;
+  --dark-purple: #855FB1;
+  --light-purple: #D9B8FF;
+  --dark-grey: #28283D;
+  --light-grey: #87879D;
+  --white: #FAFAFA;
+  /* font sizes */
+  --primary-header-desktop: 64px;
+  --secondary-header-desktop: 40px;
+  --secondary-header-desktop: 18px;
+  --primary-header-mobile: 44px;
+  --secondary-header-mobile: 32px;
+  --text-mobile: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: var(--text-mobile);
+  line-height: 26px;
+  width: 100vw;
+  color: var(--light-grey);
+}
+
+.navbar {
+  padding: 44px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-image-container {
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.header-image {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-title {
+  font-size: var(--primary-header-mobile);
+  line-height: 44px;
+  text-align: center;
+  color: var(--dark-grey);
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+
+.header-text {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  padding: 16px 40px;
+  font-weight: 900;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: var(--text-mobile);
+  border-radius: 29px;
+  color: var(--white);
+}
+
+.small {
+  font-size: var(--text-mobile);
+  font-weight: 900;
+}
+
+.button-primary {
+  background-color: var(--dark-teal);
+  border: 1px solid var(--dark-teal);
+  margin-bottom: 16px;
+}
+
+.button-primary:hover {
+  background-color: #71C0D4;
+  border: 1px solid #71C0D4;
+}
+
+.button-primary-small {
+  color: #8FE3F9;
+}
+
+.button-secondary {
+  background-color: var(--dark-purple);
+  border: 1px solid var(--dark-purple);
+}
+
+.button-secondary:hover {
+  background-color: #B18BDD;
+  border: 1px solid #B18BDD;
+}
