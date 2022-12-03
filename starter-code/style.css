@@ -10,7 +10,7 @@
   /* font sizes */
   --primary-header-desktop: 64px;
   --secondary-header-desktop: 40px;
-  --secondary-header-desktop: 18px;
+  --text-desktop: 18px;
   --primary-header-mobile: 44px;
   --secondary-header-mobile: 32px;
   --text-mobile: 16px;
@@ -21,6 +21,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Extra small devices (mobiles, 600px and down) */
 
 body {
   font-family: 'Red Hat Display', sans-serif;
@@ -43,17 +45,32 @@ body {
   align-items: center;
 }
 
-.header-image-container {
+.header-image-container-left {
   margin-bottom: 48px;
+  width: 100vw;
   display: flex;
   justify-content: center;
   overflow: hidden;
 }
 
-.header-image {
+.header-image-mobile {
   width: 110%;
   height: 100%;
   object-fit: cover;
+}
+
+.header-image-desktop-left {
+  display: none;
+}
+
+.header-image-container-right {
+  display: none;
+}
+
+.header-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-title {
@@ -68,7 +85,7 @@ body {
 .header-text {
   width: 80%;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .header-buttons {
@@ -84,6 +101,8 @@ body {
   font-size: var(--text-mobile);
   border-radius: 29px;
   color: var(--white);
+  margin: 16px;
+  cursor: pointer;
 }
 
 .small {
@@ -94,7 +113,6 @@ body {
 .button-primary {
   background-color: var(--dark-teal);
   border: 1px solid var(--dark-teal);
-  margin-bottom: 16px;
 }
 
 .button-primary:hover {
@@ -114,4 +132,93 @@ body {
 .button-secondary:hover {
   background-color: #B18BDD;
   border: 1px solid #B18BDD;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .header-container {
+    margin-bottom: 72px;
+  }
+  .header-title {
+    font-size: 48px;
+    line-height: 48px;
+    width: 50%;
+  }
+  .header-text {
+    width: 50%;
+  }
+  .header-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header-image-mobile {
+    width: 110%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: var(--text-desktop);
+  }
+
+  .navbar {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-image-mobile {
+    display: none;
+  }
+
+  .header-image-container-left {
+    margin: 0;
+    width: auto;
+    height: 350px;
+    align-items: flex-start;
+  }
+
+  .header-image-desktop-left {
+    display: block;
+    position: relative;
+    left: -30px;
+  }
+
+  .header-image-container-right {
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    height: 350px;
+  }
+
+  .header-image-desktop-right {
+    display: block;
+    position: relative;
+    right: -30px;
+  }
+
+  .header-title {
+    width: 80%;
+    font-size: var(--primary-header-desktop);
+    line-height: 64px;
+    margin-bottom: 34px;
+  }
+
+  .header-text {
+    width: 80%;
+  }
+
+  .button {
+    font-size: var(--text-desktop);
+    margin-bottom: 0;
+  }
 }
