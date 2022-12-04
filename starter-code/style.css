@@ -414,6 +414,7 @@ a:hover {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding: 116px 165px 104px 165px;
   }
 
   .second-section > * {
