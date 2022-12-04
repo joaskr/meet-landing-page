@@ -29,6 +29,7 @@ body {
   font-size: var(--text-mobile);
   line-height: 26px;
   color: var(--light-grey);
+  background-color: #f2f2f2;
 }
 
 .navbar {
